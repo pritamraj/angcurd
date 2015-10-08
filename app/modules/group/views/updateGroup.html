@@ -1,0 +1,28 @@
+<div class="modal fade " id="updateGroup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog mediumModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title kpiCustomHeading">Update Group</h4>
+            </div>
+            <form name="updateGroupForm">
+                <div class="modal-body">
+                    <div class='row'>
+                        <div class='col-xs-12'>
+                            <formly-form model='currentGroup' fields='groupFields'></formly-form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button class="btn btn-primary" ng-click="updateGroup()"
+                            ng-disabled="updateGroupForm.$invalid">Save
+                    </button>
+                    <button class="btn" data-ng-click="emptyGroup()" data-dismiss="modal">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

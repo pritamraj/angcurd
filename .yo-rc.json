@@ -1,0 +1,13 @@
+{
+  "generator-angular-crud-custom-module": {
+    "modules": [
+      {
+        "moduleName": "Group",
+        "moduleVariable": "groups",
+        "module": "group",
+        "dir": "app/modules",
+        "relativePath": "modules"
+      }
+    ]
+  }
+}
