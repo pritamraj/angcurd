@@ -5,11 +5,15 @@
     
         angular.module("Group",[]);
     
+        angular.module("Customers",[]);
+    
 
 
 angular.module("misremit", ["ui.router","formly","formlyBootstrap"
     
         ,"Group"
+    
+        ,"Customers"
     
 
 ])
@@ -21,6 +25,12 @@ angular.module("misremit", ["ui.router","formly","formlyBootstrap"
                     url: "/groups",
                     templateUrl: "modules/group/views/groups.html",
                     controller: "GroupCtrl"
+                    })
+            
+                .state("Customers",{
+                    url: "/customerss",
+                    templateUrl: "modules/customers/views/customerss.html",
+                    controller: "CustomersCtrl"
                     })
             
          

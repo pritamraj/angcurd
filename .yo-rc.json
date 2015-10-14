@@ -7,6 +7,13 @@
         "module": "group",
         "dir": "app/modules",
         "relativePath": "modules"
+      },
+      {
+        "moduleName": "Customers",
+        "moduleVariable": "customerss",
+        "module": "customers",
+        "dir": "app/modules",
+        "relativePath": "modules"
       }
     ]
   }

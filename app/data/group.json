@@ -1,8 +1,10 @@
 [
   {
-    "name": "JSF"
+    "groupname": "JSF",
+    "status" :"1"
   },
   {
-    "name": "EJB"
+    "name": "EJB",
+     "status" :"1"
   }
 ]

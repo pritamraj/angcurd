@@ -10,8 +10,7 @@
             </a>
 
             <div class="col-md-3 pull-right">
-                <input type="text" class="form-control customSearch" ng-model="groupsSearch"
-                       placeholder="Search Group">
+                <input type="text" class="form-control customSearch" ng-model="groupsSearch" placeholder="Search Group">
             </div>
         </div>
     </div>
@@ -35,7 +34,9 @@
                     <th role="columnheader" ng-click="sort='';reverse=!reverse">
                         Group Name
                     </th>
-                    
+                      <th role="columnheader" ng-click="sort='';reverse=!reverse">
+                       status
+                    </th>
 
                     <th role="columnheader" class="actionTH">Actions</th>
                 </tr>
@@ -44,8 +45,12 @@
                 <tr ng-repeat="group in groups | searchObject:groupsSearch | orderObjectBy:sort:reverse"
                     ng-animate="''">
                     
+                    
                     <td>
                         {{ group.name }}
+                    </td>
+                    <td>
+                        {{ group.status }}
                     </td>
                     
 

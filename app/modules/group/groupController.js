@@ -6,7 +6,7 @@ angular.module('Group')
     .controller('GroupCtrl', ["$scope", "$rootScope", "GroupServices", function ($scope, $rootScope,GroupServices) {
 
         $scope.currentGroup= {};
-        $scope.groupFields=[{"type":"input","templateOptions":{"label":"Group Name","required":false,"type":"text"}}];
+        $scope.groupFields=[{"type":"input","templateOptions":{"label":"groupName","required":false,"type":"text"}},{"type":"input","templateOptions":{"label":"status","required":false,"type":"text"}}];
 
         // retrieve Group to server
         $scope.retrieveGroups = (function(){
