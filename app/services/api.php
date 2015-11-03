@@ -97,10 +97,11 @@
 			}
 
 			$customer = json_decode(file_get_contents("php://input"),true);
-			$column_names = array('customerName', 'email', 'city', 'address', 'country');
+			$column_names = array('customerName', 'email', 'city', 'address', 'country', 'status');
 			$keys = array_keys($customer);
 			$columns = '';
 			$values = '';
+			//print_r($keys); exit;
 			foreach($column_names as $desired_key){ // Check the customer received. If blank insert blank into the array.
 			   if(!in_array($desired_key, $keys)) {
 			   		$$desired_key = '';
@@ -124,11 +125,14 @@
 			}
 			$customer = json_decode(file_get_contents("php://input"),true);
 			$id = (int)$customer['id'];
-			$column_names = array('customerName', 'email', 'city', 'address', 'country');
+			$column_names = array('customerName', 'email', 'city', 'address', 'state', 'postalCode','country', 'status');
 			$keys = array_keys($customer['customer']);
+
 			$columns = '';
 			$values = '';
 			foreach($column_names as $desired_key){ // Check the customer received. If key does not exist, insert blank into the array.
+			  // echo $desired_key	
+
 			   if(!in_array($desired_key, $keys)) {
 			   		$$desired_key = '';
 				}else{
@@ -136,7 +140,9 @@
 				}
 				$columns = $columns.$desired_key."='".$$desired_key."',";
 			}
-			echo $query = "UPDATE angularcode_customers SET ".trim($columns,',')." WHERE customerNumber=$id";
+
+			
+			$query = "UPDATE angularcode_customers SET ".trim($columns,',')." WHERE customerNumber=$id";
 
 			if(!empty($customer)){
 				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);

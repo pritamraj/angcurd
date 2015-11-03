@@ -66,16 +66,15 @@ angular.module('Customers')
                                     "templateOptions": {
                                     "label": "Country",
                                     "type": "text"
-                                }}
-
-                               
+                                }},
+                                 {
+                                     "key": "status",
+                                     "type": "checkbox",
+                                     "templateOptions": {
+                                        "label": "status",
+                                        "type":  "checked"    
+                                }}                               
         ];
-
-
-
-
-
-
 
 
         // retrieve Customers to server
@@ -94,7 +93,7 @@ angular.module('Customers')
             $('#addCustomers.modal').modal('show');
         }
 
-        // save Customers to server
+        // save Customers to server 
         $scope.saveCustomers = function(){
             CustomersServices.saveCustomers($scope.currentCustomers)
             .then(function(result){
